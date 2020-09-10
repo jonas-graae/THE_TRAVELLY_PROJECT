@@ -1,0 +1,34 @@
+@mixin optional_grid {
+    .grid {
+        display: grid;
+        grid-gap: $padding;
+        grid-template-columns: 1fr;
+    
+        @for $i from 2 through $max-columns-s {
+            &.s_#{$i} {
+               grid-template-columns: repeat($i, 1fr);
+            }
+        }
+    
+        @include tablet {
+            @for $i from 2 through $max-columns-m {
+                &.m_#{$i} {
+                   grid-template-columns: repeat($i, 1fr);
+                }
+            }
+        }    
+    
+        @include desktop {
+            @for $i from 3 through $max-columns-xl {
+                &.xl_#{$i} {
+                   grid-template-columns: repeat($i, 1fr);
+                }
+            }
+        }  
+    
+        .item {
+            min-height: 200px; 
+            background-color: rgb(101, 175, 40);
+        }
+    }
+}

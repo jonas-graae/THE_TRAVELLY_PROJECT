@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  background-color: $background-light;
+  /*  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+
+    min-height: 100vh;*/
+  color: $color-font;
+
+  /*
+CSS3 introducerer et par nye enheder, inklusive remenheden, der står for "root em" . Den remenhed er i forhold til den skriftstørrelse af rodelement html. Det betyder, at vi kan definere en enkelt skriftstørrelse på rodelementet og definere alle remenheder til at være en procentdel af det. Typografien er font-sizedefineret i 1.6rem (16px) og line-heighti 1.6 (24px) */
+}
